@@ -1,0 +1,163 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2024-01-02T17:08:03.198793894-08:00",
+            "magic": "1c7bee3f57c8d621757e12febf05da234085ddfd4ef5c94d61087118355865f9",
+            "version": "v3.94.2"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "team-ce",
+                "project": "rds-secret-test",
+                "stack": "phil"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:phil::rds-secret-test::pulumi:pulumi:Stack::rds-secret-test-phil",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "created": "2024-01-03T01:05:54.981353556Z",
+                "modified": "2024-01-03T01:05:54.981353556Z",
+                "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+            },
+            {
+                "urn": "urn:pulumi:phil::rds-secret-test::pulumi:providers:aws::default_6_17_0",
+                "custom": true,
+                "id": "df1e2240-5b4a-4a35-971a-5484c87a8018",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "profile": "pulumi-ce",
+                    "region": "us-west-2",
+                    "skipCredentialsValidation": "false",
+                    "skipMetadataApiCheck": "true",
+                    "skipRegionValidation": "true",
+                    "version": "6.17.0"
+                },
+                "outputs": {
+                    "profile": "pulumi-ce",
+                    "region": "us-west-2",
+                    "skipCredentialsValidation": "false",
+                    "skipMetadataApiCheck": "true",
+                    "skipRegionValidation": "true",
+                    "version": "6.17.0"
+                },
+                "created": "2024-01-03T01:06:01.581968091Z",
+                "modified": "2024-01-03T01:06:01.581968091Z"
+            },
+            {
+                "urn": "urn:pulumi:phil::rds-secret-test::aws:rds/cluster:Cluster::test",
+                "custom": true,
+                "id": "example",
+                "type": "aws:rds/cluster:Cluster",
+                "inputs": {
+                    "__defaults": [
+                        "copyTagsToSnapshot",
+                        "deleteAutomatedBackups",
+                        "enableGlobalWriteForwarding",
+                        "enableHttpEndpoint",
+                        "engineMode",
+                        "skipFinalSnapshot"
+                    ],
+                    "clusterIdentifier": "example",
+                    "copyTagsToSnapshot": false,
+                    "databaseName": "test",
+                    "deleteAutomatedBackups": true,
+                    "enableGlobalWriteForwarding": false,
+                    "enableHttpEndpoint": false,
+                    "engine": "aurora-mysql",
+                    "engineMode": "provisioned",
+                    "manageMasterUserPassword": true,
+                    "masterUsername": "admin",
+                    "skipFinalSnapshot": false
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":7200000000000,\"delete\":7200000000000,\"update\":7200000000000},\"schema_version\":\"1\"}",
+                    "allocatedStorage": 1,
+                    "arn": "arn:aws:rds:us-west-2:052848974346:cluster:example",
+                    "availabilityZones": [
+                        "us-west-2a",
+                        "us-west-2b",
+                        "us-west-2c"
+                    ],
+                    "backtrackWindow": 0,
+                    "backupRetentionPeriod": 1,
+                    "clusterIdentifier": "example",
+                    "clusterIdentifierPrefix": "",
+                    "clusterMembers": [],
+                    "clusterResourceId": "cluster-UI2VA6H64SAUZTCD2R3NYG575Y",
+                    "copyTagsToSnapshot": false,
+                    "databaseName": "test",
+                    "dbClusterInstanceClass": "",
+                    "dbClusterParameterGroupName": "default.aurora-mysql8.0",
+                    "dbSubnetGroupName": "default",
+                    "dbSystemId": "",
+                    "deleteAutomatedBackups": true,
+                    "deletionProtection": false,
+                    "enableGlobalWriteForwarding": false,
+                    "enableHttpEndpoint": false,
+                    "enabledCloudwatchLogsExports": [],
+                    "endpoint": "example.cluster-cumzewvmnnwl.us-west-2.rds.amazonaws.com",
+                    "engine": "aurora-mysql",
+                    "engineMode": "provisioned",
+                    "engineVersion": "8.0.mysql_aurora.3.04.1",
+                    "engineVersionActual": "8.0.mysql_aurora.3.04.1",
+                    "globalClusterIdentifier": "",
+                    "hostedZoneId": "Z1PVIF0B656C1W",
+                    "iamDatabaseAuthenticationEnabled": false,
+                    "iamRoles": [],
+                    "id": "example",
+                    "iops": 0,
+                    "kmsKeyId": "",
+                    "manageMasterUserPassword": true,
+                    "masterUserSecrets": [
+                        {
+                            "kmsKeyId": "arn:aws:kms:us-west-2:052848974346:key/6e87ef2d-1c30-403c-bf77-c68da80443d7",
+                            "secretArn": "arn:aws:secretsmanager:us-west-2:052848974346:secret:rds!cluster-36dba12b-5fe2-422e-8c35-de05a7462421-9cznMo",
+                            "secretStatus": "active"
+                        }
+                    ],
+                    "masterUsername": "admin",
+                    "networkType": "IPV4",
+                    "port": 3306,
+                    "preferredBackupWindow": "11:56-12:26",
+                    "preferredMaintenanceWindow": "sat:07:40-sat:08:10",
+                    "readerEndpoint": "example.cluster-ro-cumzewvmnnwl.us-west-2.rds.amazonaws.com",
+                    "replicationSourceIdentifier": "",
+                    "scalingConfiguration": null,
+                    "serverlessv2ScalingConfiguration": null,
+                    "skipFinalSnapshot": false,
+                    "storageEncrypted": false,
+                    "storageType": "",
+                    "tags": {},
+                    "tagsAll": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAJpoPwAgZgEj8JKcCd1eH65cW5DxeAN4+0Sz2BGnng=="
+                    },
+                    "vpcSecurityGroupIds": [
+                        "sg-6f802d1b"
+                    ]
+                },
+                "parent": "urn:pulumi:phil::rds-secret-test::pulumi:pulumi:Stack::rds-secret-test-phil",
+                "provider": "urn:pulumi:phil::rds-secret-test::pulumi:providers:aws::default_6_17_0::df1e2240-5b4a-4a35-971a-5484c87a8018",
+                "propertyDependencies": {
+                    "clusterIdentifier": null,
+                    "databaseName": null,
+                    "engine": null,
+                    "manageMasterUserPassword": null,
+                    "masterUsername": null
+                },
+                "additionalSecretOutputs": [
+                    "masterPassword",
+                    "tagsAll"
+                ],
+                "created": "2024-01-03T01:08:03.198559693Z",
+                "modified": "2024-01-03T01:08:03.198559693Z",
+                "sourcePosition": "project:///index.ts#5,14"
+            }
+        ]
+    }
+}

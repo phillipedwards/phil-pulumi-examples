@@ -1,0 +1,195 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2024-01-24T06:33:14.306852306-08:00",
+            "magic": "3ff53efef69f38d19e364655131bbb113e416d3bf64bfb819065fa12acb29250",
+            "version": "v3.100.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "team-ce",
+                "project": "target-up-azure",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::target-up-azure::pulumi:pulumi:Stack::target-up-azure-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "outputKey": "outputValue"
+                },
+                "created": "2024-01-24T14:31:56.157044976Z",
+                "modified": "2024-01-24T14:31:56.157044976Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::target-up-azure::pulumi:providers:azure-native::azure",
+                "custom": true,
+                "id": "c1ecf2d6-add6-409f-8801-b79995c90e37",
+                "type": "pulumi:providers:azure-native",
+                "inputs": {
+                    "environment": "public",
+                    "useMsi": "false",
+                    "useOidc": "false",
+                    "version": "2.26.0"
+                },
+                "outputs": {
+                    "environment": "public",
+                    "useMsi": "false",
+                    "useOidc": "false",
+                    "version": "2.26.0"
+                },
+                "parent": "urn:pulumi:dev::target-up-azure::pulumi:pulumi:Stack::target-up-azure-dev",
+                "propertyDependencies": {
+                    "environment": null,
+                    "useMsi": null,
+                    "useOidc": null
+                },
+                "created": "2024-01-24T14:31:57.149405503Z",
+                "modified": "2024-01-24T14:31:57.149405503Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::target-up-azure::azure-native:resources:ResourceGroup::rg",
+                "custom": true,
+                "id": "/subscriptions/32b9cb2e-69be-4040-80a6-02cd6b2cc5ec/resourceGroups/rg7be17dcf",
+                "type": "azure-native:resources:ResourceGroup",
+                "inputs": {
+                    "__createBeforeDelete": true,
+                    "location": "WestUs",
+                    "resourceGroupName": "rg7be17dcf"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAFVzcUMe1+BdH2+p9xee0NF1Mce/GcK8HFXgXEjeRpVor2+PSIsHSZbdE1OUDUflljwQxoNpX0rMOtXhgGuCSCezPBZI2mSJ5iV8LI7RMQpz02y05q1Sv++XyiyR/bfF8k2z9UusUQvUaYKEEKTL"
+                    },
+                    "id": "/subscriptions/32b9cb2e-69be-4040-80a6-02cd6b2cc5ec/resourceGroups/rg7be17dcf",
+                    "location": "westus",
+                    "name": "rg7be17dcf",
+                    "properties": {
+                        "provisioningState": "Succeeded"
+                    },
+                    "type": "Microsoft.Resources/resourceGroups"
+                },
+                "parent": "urn:pulumi:dev::target-up-azure::pulumi:pulumi:Stack::target-up-azure-dev",
+                "provider": "urn:pulumi:dev::target-up-azure::pulumi:providers:azure-native::azure::c1ecf2d6-add6-409f-8801-b79995c90e37",
+                "propertyDependencies": {
+                    "location": null
+                },
+                "created": "2024-01-24T14:31:59.378634319Z",
+                "modified": "2024-01-24T14:31:59.378634319Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::target-up-azure::pulumi:providers:random::default_4_15_1",
+                "custom": true,
+                "id": "9b8a89cd-91ce-41f2-b5db-80e0e5431110",
+                "type": "pulumi:providers:random",
+                "inputs": {
+                    "version": "4.15.1"
+                },
+                "outputs": {
+                    "version": "4.15.1"
+                },
+                "created": "2024-01-24T14:33:14.128725004Z",
+                "modified": "2024-01-24T14:33:14.128725004Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::target-up-azure::azure-native:storage:StorageAccount::sa",
+                "custom": true,
+                "id": "/subscriptions/32b9cb2e-69be-4040-80a6-02cd6b2cc5ec/resourceGroups/rg7be17dcf/providers/Microsoft.Storage/storageAccounts/phils012412154",
+                "type": "azure-native:storage:StorageAccount",
+                "inputs": {
+                    "accountName": "phils012412154",
+                    "kind": "StorageV2",
+                    "location": "WestUS",
+                    "resourceGroupName": "rg7be17dcf",
+                    "sku": {
+                        "name": "Standard_LRS"
+                    }
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "AAABAEA0tGxUR+QIuhMxlykpZUtn5Xvxl3oAOo6MlmRYNt/B5qY4bM7qgTp1y7qeBo6q+9z7M92q7bDBioERApo8CGTQZ+fKtxAYkQqMeOPJIFql+aVDDa3kf8NR4N2HvRUZKjPmDcaeRCr4c0Ab3/kMOSX/fQWZAMwD6ia0M5flZRAM8QOnX//RGGzaxO8K/O3f9WDu0SQDw+W39syqeFS+CPOk7A=="
+                    },
+                    "accessTier": "Hot",
+                    "allowBlobPublicAccess": false,
+                    "allowCrossTenantReplication": false,
+                    "creationTime": "2024-01-24T14:31:59.8743247Z",
+                    "enableHttpsTrafficOnly": true,
+                    "encryption": {
+                        "keySource": "Microsoft.Storage",
+                        "services": {
+                            "blob": {
+                                "enabled": true,
+                                "keyType": "Account",
+                                "lastEnabledTime": "2024-01-24T14:32:00.0774513Z"
+                            },
+                            "file": {
+                                "enabled": true,
+                                "keyType": "Account",
+                                "lastEnabledTime": "2024-01-24T14:32:00.0774513Z"
+                            }
+                        }
+                    },
+                    "id": "/subscriptions/32b9cb2e-69be-4040-80a6-02cd6b2cc5ec/resourceGroups/rg7be17dcf/providers/Microsoft.Storage/storageAccounts/phils012412154",
+                    "keyCreationTime": {
+                        "key1": "2024-01-24T14:31:59.9524475Z",
+                        "key2": "2024-01-24T14:31:59.9524475Z"
+                    },
+                    "kind": "StorageV2",
+                    "location": "westus",
+                    "minimumTlsVersion": "TLS1_0",
+                    "name": "phils012412154",
+                    "networkRuleSet": {
+                        "bypass": "AzureServices",
+                        "defaultAction": "Allow",
+                        "ipRules": [],
+                        "virtualNetworkRules": []
+                    },
+                    "primaryEndpoints": {
+                        "blob": "https://phils012412154.blob.core.windows.net/",
+                        "dfs": "https://phils012412154.dfs.core.windows.net/",
+                        "file": "https://phils012412154.file.core.windows.net/",
+                        "queue": "https://phils012412154.queue.core.windows.net/",
+                        "table": "https://phils012412154.table.core.windows.net/",
+                        "web": "https://phils012412154.z22.web.core.windows.net/"
+                    },
+                    "primaryLocation": "westus",
+                    "privateEndpointConnections": [],
+                    "provisioningState": "Succeeded",
+                    "sku": {
+                        "name": "Standard_LRS",
+                        "tier": "Standard"
+                    },
+                    "statusOfPrimary": "available",
+                    "tags": {},
+                    "type": "Microsoft.Storage/storageAccounts"
+                },
+                "parent": "urn:pulumi:dev::target-up-azure::pulumi:pulumi:Stack::target-up-azure-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::target-up-azure::azure-native:resources:ResourceGroup::rg",
+                    "urn:pulumi:dev::target-up-azure::random:index/randomString:RandomString::rand"
+                ],
+                "provider": "urn:pulumi:dev::target-up-azure::pulumi:providers:azure-native::azure::c1ecf2d6-add6-409f-8801-b79995c90e37",
+                "propertyDependencies": {
+                    "accountName": [
+                        "urn:pulumi:dev::target-up-azure::random:index/randomString:RandomString::rand"
+                    ],
+                    "kind": null,
+                    "location": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::target-up-azure::azure-native:resources:ResourceGroup::rg"
+                    ],
+                    "sku": null
+                },
+                "created": "2024-01-24T14:32:20.092299346Z",
+                "modified": "2024-01-24T14:32:20.092299346Z"
+            }
+        ]
+    }
+}
